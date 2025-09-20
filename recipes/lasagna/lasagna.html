@@ -19,7 +19,7 @@
   <body>
     <div class="container">
       <header
-        class="mb-4 d-flex flex-row justify-content-between align-items-center py-3 border-bottom"
+        class="d-flex flex-row justify-content-between align-items-center py-3 border-bottom"
       >
         <a class="text-decoration-none link-body-emphasis" href="/index.html">
           <h2 class="mb-0 fs-4">Odin Recipes</h2>
@@ -34,44 +34,26 @@
         </ul>
       </header>
       <main class="mb-5">
-        <nav aria-label="breadcrumb">
-          <ol
-            class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3"
-          >
+        <nav class="my-4" aria-label="breadcrumb">
+          <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
             <li class="breadcrumb-item">
               <a class="link-body-emphasis" href="/index.html">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="bi mb-1"
-                  width="16"
-                  height="16"
-                >
-                  <path
-                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
-                  />
-                  <path
-                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
-                  />
-                </svg>
-
+                <i class="bi bi-house-door"></i>
                 <span class="visually-hidden">Home</span>
               </a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Lasagna</li>
           </ol>
         </nav>
-        <div class="row row-cols-1 row-cols-lg-2">
-          <div class="col order-2 order-lg-1">
+        <div class="row g-lg-5 row-cols-1 row-cols-lg-2">
+          <div class="col col-lg-6 order-2 order-lg-1">
             <h1 class="mb-3 display-5 fw-bold">Lasagna</h1>
             <p class="lead">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
               iusto, quae ducimus vitae autem veniam sint necessitatibus ad
-              repellendus voluptates dolores id natus, inventore voluptas. Modi
-              recusandae quasi saepe quidem?
+              repellendus voluptates dolores id natus, inventore voluptas.
             </p>
-            <div class="d-flex flex-row align-items-center gap-4">
+            <div class="mb-3 d-flex flex-row align-items-center gap-4">
               <div class="d-flex flex-row align-items-center gap-2">
                 <i class="bi bi-alarm"></i>
                 <p class="m-0 text-body-secondary">40 minutes</p>
@@ -85,8 +67,24 @@
                 <p class="m-0 text-body-secondary">Cheap</p>
               </div>
             </div>
+            <div class="d-flex flex-row align-items-center gap-3">
+              <button
+                class="btn btn-danger d-inline-flex align-items-center"
+                type="button"
+              >
+                Like
+                <i class="bi bi-heart ms-2"></i>
+              </button>
+              <button
+                class="btn btn-primary d-inline-flex align-items-center"
+                type="button"
+              >
+                Share
+                <i class="bi bi-share ms-2"></i>
+              </button>
+            </div>
           </div>
-          <div class="col mb-4 mb-lg-0 order-1 order-lg-2">
+          <div class="col col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
             <div class="ratio ratio-16x9">
               <img
                 class="w-100 h-100 object-fit-cover rounded"
@@ -94,6 +92,272 @@
                 alt="cooking"
               />
             </div>
+          </div>
+          <div class="pt-5 pt-lg-0 col col-lg-6 order-3">
+            <h3 class="mb-4">Ingredients</h3>
+
+            <div class="mb-4 btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-dash"></i></button>
+              <span class="btn btn-outline-secondary disabled text-dark">3 Persons</span>
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus"></i></button>
+            </div>
+
+            <ul class="row g-4 list-unstyled">
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/lasagna.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Lasagna"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      One pack of
+                      <span class="fw-bold text-decoration-underline"
+                        >Lasagna</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/onion.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Onion"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      3
+                      <span class="fw-bold text-decoration-underline"
+                        >Onions</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/butter.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Onion"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      125g of
+                      <span class="fw-bold text-decoration-underline"
+                        >Butter</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/flour.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Onion"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      100g of
+                      <span class="fw-bold text-decoration-underline"
+                        >Flour</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/pepper.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Onion"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      <span class="fw-bold text-decoration-underline"
+                        >Pepper</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+              <li class="col-6 col-md-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="ratio ratio-16x9">
+                    <img
+                      src="/recipes/lasagna/ingredients/salt.jpg"
+                      class="card-img-top w-100 h-100 object-fit-cover"
+                      alt="Onion"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="fw-normal lh-sm card-title text-secondary">
+                      <span class="fw-bold text-decoration-underline"
+                        >Salt</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a href="#">
+              <span>Show more ingredients</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="pt-5 pt-lg-0 col col-lg-6 order-4">
+            <h3 class="mb-4">Steps</h3>
+
+            <ol class="accordion list-unstyled" id="accordionExample">
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Step 1
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Step 2
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Step 3
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Step 4
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    Step 5
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    Step 6
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, commodi eveniet corporis repudiandae molestias
+                    numquam illum porro dolore libero cupiditate nam excepturi
+                    atque alias quos odit laudantium qui nobis voluptatum.
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </main>
