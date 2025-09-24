@@ -3,7 +3,6 @@
 ## Todo
 
 - [x] Refactor colors
-- [ ] Refactor spacing
 - [x] Refactor BEM components
 - [x] Refactor SVG management
 - [x] Refactor Structure of the files
@@ -13,4 +12,5 @@
 - [ ] refactor icon-button
 - [ ] refactor logo
 - [ ] refactor navigation
-- [ ] add typo component
+- [x] add typo component
+- [ ] add meta

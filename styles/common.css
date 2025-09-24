@@ -121,6 +121,52 @@ h6 {
   --color-rating-star-empty: var(--color-gray-300);
 }
 
+.typo {
+  font-family: var(--font-family);
+}
+
+.typo--title-xxl {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
+}
+
+.typo--title-xl {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+}
+
+.typo--title-lg {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.typo--title-md {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.typo--title-sm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.typo--body-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.typo--label-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
 .background {
   background-color: var(--color-emerald-background);
 }
@@ -128,7 +174,6 @@ h6 {
 .page {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-family);
   background-color: var(--color-gray-background);
 }
 
@@ -158,9 +203,6 @@ h6 {
   transition-property: background-color, color, border;
   transition-duration: 300ms;
   border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5rem;
   cursor: pointer;
 }
 
@@ -230,8 +272,6 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
   color: var(--color-primary);
 }
 
@@ -299,7 +339,6 @@ h6 {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-family);
   text-decoration: none;
   transition: color;
   transition-duration: 300ms;
@@ -321,11 +360,6 @@ h6 {
 .logo__icon {
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.logo__text {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 .card {
@@ -429,8 +463,6 @@ h6 {
 
 .navigation__link {
   text-decoration: none;
-  font-family: var(--font-family);
-  font-weight: 500;
   transition-property: color;
   transition-duration: 300ms;
 }
@@ -458,15 +490,11 @@ h6 {
 
 .footer__site-description {
   max-width: 30rem;
-  font-size: 1rem;
-  font-weight: 400;
   color: var(--color-on-emerald-background-variant);
 }
 
 .newsletter__title {
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 500;
   color: var(--color-on-emerald-background);
 }
 
@@ -490,8 +518,6 @@ h6 {
   border-right: 0;
   border-bottom: 0.125rem solid var(--color-on-emerald-background);
   color: oklch(97% 0 0);
-  font-size: 1rem;
-  font-weight: 500;
 }
 
 .newsletter__input:focus-visible {
@@ -518,8 +544,6 @@ h6 {
 
 .menu__title {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: 500;
   color: oklch(97% 0 0);
 }
 
