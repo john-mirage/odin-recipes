@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/index.css">
   </head>
 
   <body class="page">
@@ -53,7 +54,9 @@
             </nav>
           </div>
           <div class="header__section header__section--right">
-            <button class="icon-button icon-button--on-dark icon-button--account">
+            <button
+              class="icon-button icon-button--secondary icon-button--on-dark header__account-icon"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -69,7 +72,9 @@
                 />
               </svg>
             </button>
-            <button class="icon-button icon-button--on-dark icon-button--search">
+            <button
+              class="icon-button icon-button--secondary icon-button--on-dark header__search-icon"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -83,7 +88,9 @@
                 />
               </svg>
             </button>
-            <button class="icon-button icon-button--on-dark icon-button--menu">
+            <button
+              class="icon-button icon-button--secondary icon-button--on-dark header__menu-icon"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -112,26 +119,44 @@
               assumenda rem veniam expedita error mollitia hic, et quas quaerat
               tenetur doloribus eos asperiores.
             </p>
-            <button class="hero__button">Explore recipes</button>
+            <button class="button button--primary button--large">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="button__icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+                />
+              </svg>
+              Explore recipes
+            </button>
           </div>
           <div class="hero__right-section">
-            <img src="/pizza.png" alt="pizza" />
-            <article class="hero__rating-card hero__rating-card--1 rating-card">
+            <img src="/images/index/pizza.png" alt="pizza" />
+            <article
+              class="card card--small hero__rating-card hero__rating-card--1 rating-card"
+            >
               <div class="rating-card__header">
                 <img
                   class="rating-card__user-image"
-                  src="/images/anastasia.jpg"
+                  src="/images/users/anastasia-lawson.jpg"
                   alt="anastasia"
                 />
-                <h4 class="rating-card__user-name">Anastasia</h4>
+                <h4 class="rating-card__user-name">Anastasia Lawson</h4>
               </div>
               <div class="rating-card__body">
-                <div class="rating-card__rating">
+                <div class="rating rating--5-of-5 rating-card__rating">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -143,7 +168,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -155,7 +180,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -167,7 +192,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -179,7 +204,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--empty"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -193,22 +218,24 @@
                 </p>
               </div>
             </article>
-            <article class="hero__rating-card hero__rating-card--2 rating-card">
+            <article
+              class="card card--small hero__rating-card hero__rating-card--2 rating-card"
+            >
               <div class="rating-card__header">
                 <img
                   class="rating-card__user-image"
-                  src="/images/marina.jpg"
+                  src="/images/users/marina-hamilton.jpg"
                   alt="anastasia"
                 />
-                <h4 class="rating-card__user-name">Marina</h4>
+                <h4 class="rating-card__user-name">Marina Hamilton</h4>
               </div>
               <div class="rating-card__body">
-                <div class="rating-card__rating">
+                <div class="rating rating--4-of-5 rating-card__rating">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -220,7 +247,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -232,7 +259,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -244,7 +271,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -256,7 +283,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating-card__star rating-card__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -278,15 +305,14 @@
       <section class="container popular-recipes">
         <div class="popular-recipes__header">
           <h2 class="popular-recipes__title">Popular recipes of the week</h2>
-          <a class="popular-recipes__link" href="#"
-            ><span class="popular-recipes__link-text">Show more popular recipes</span
-            ><svg
+          <a class="link popular-recipes__link" href="#"
+            >Show more popular recipes<svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="popular-recipes__link-icon"
+              class="link__icon"
             >
               <path
                 stroke-linecap="round"
@@ -298,43 +324,43 @@
         </div>
         <ul class="popular-recipes__grid">
           <li class="recipe-card">
-            <a class="recipe-card__link" href="/recipes/lasagna/lasagna.html">
-              <img class="recipe-card__image" src="/lasagna.jpg" alt="" />
+            <a class="recipe-card__link" href="/recipes/lasagna.html">
+              <img class="recipe-card__image" src="/images/index/lasagna.jpg" alt="" />
               <h3 class="recipe-card__title">Vegan pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
           </li>
           <li class="recipe-card">
-            <a class="recipe-card__link" href="#">
-              <img class="recipe-card__image" src="/burger.jpg" alt="" />
+            <a class="recipe-card__link" href="/recipes/burger.html">
+              <img class="recipe-card__image" src="/images/index/burger.jpg" alt="" />
               <h3 class="recipe-card__title">Peperoni pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
           </li>
           <li class="recipe-card">
-            <a class="recipe-card__link" href="#">
-              <img class="recipe-card__image" src="/french-fries.jpg" alt="" />
+            <a class="recipe-card__link" href="/recipes/french-fries.html">
+              <img class="recipe-card__image" src="/images/index/french-fries.jpg" alt="" />
               <h3 class="recipe-card__title">Margarita pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
           </li>
           <li class="recipe-card">
             <a class="recipe-card__link" href="#">
-              <img class="recipe-card__image" src="/pasta.jpg" alt="" />
+              <img class="recipe-card__image" src="/images/index/pasta.jpg" alt="" />
               <h3 class="recipe-card__title">Margarita pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
           </li>
           <li class="recipe-card">
             <a class="recipe-card__link" href="#">
-              <img class="recipe-card__image" src="/salad.jpg" alt="" />
+              <img class="recipe-card__image" src="/images/index/salad.jpg" alt="" />
               <h3 class="recipe-card__title">Margarita pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
           </li>
           <li class="recipe-card">
             <a class="recipe-card__link" href="#">
-              <img class="recipe-card__image" src="/sushi.jpg" alt="" />
+              <img class="recipe-card__image" src="/images/index/sushi.jpg" alt="" />
               <h3 class="recipe-card__title">Margarita pizza</h3>
               <p class="recipe-card__author">By James henry</p>
             </a>
@@ -343,7 +369,7 @@
       </section>
       <section class="cta">
         <div class="container cta__inner">
-          <div class="cta__card">
+          <div class="card cta__card">
             <h2 class="cta__title">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               magnam vitae dolor cupiditate.
@@ -353,23 +379,23 @@
               id velit necessitatibus quaerat molestiae enim quod commodi est
               esse quae.
             </p>
-            <button class="cta__button">Show more</button>
+            <button class="button button--primary button--medium">
+              Show more
+            </button>
           </div>
         </div>
       </section>
       <section class="container community-recipes">
         <div class="community-recipes__header">
           <h2 class="community-recipes__title">Fresh from our community</h2>
-          <a class="community-recipes__link" href="#"
-            ><span class="community-recipes__link-text"
-              >Show more community recipes</span
-            ><svg
+          <a class="link community-recipes__link" href="#"
+            >Show more community recipes<svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="community-recipes__link-icon"
+              class="link__icon"
             >
               <path
                 stroke-linecap="round"
@@ -379,26 +405,26 @@
           ></a>
         </div>
         <ul class="community-recipes__grid">
-          <li class="community-card">
+          <li class="card community-card">
             <div class="community-card__header">
               <img
                 class="community-card__user-image"
-                src="/images/juliet.jpg"
+                src="/images/users/juliet-watson.jpg"
                 alt=""
               />
               <div class="community-card__text">
                 <a class="community-card__recipe-link" href="#">
                   <h4 class="community-card__recipe-name">Apple pie</h4>
                 </a>
-                <p class="community-card__user-name">Juliet Spencer</p>
+                <p class="community-card__user-name">Juliet Watson</p>
               </div>
             </div>
-            <div class="community-card__rating">
+            <div class="rating rating--5-of-5 community-card__rating">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -410,7 +436,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -422,7 +448,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -434,7 +460,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -446,7 +472,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -461,16 +487,16 @@
               omnis labore animi quae, doloremque at est vero, officiis
               adipisci! Aspernatur, tempora iste.
             </p>
-            <img class="community-card__image" src="/apple-pie.jpg" alt="" />
+            <img class="community-card__image" src="/images/index/apple-pie.jpg" alt="" />
             <div class="community-card__button-group">
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -480,14 +506,14 @@
                 </svg>
                 <span>Like</span>
               </button>
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -499,26 +525,26 @@
               </button>
             </div>
           </li>
-          <li class="community-card">
+          <li class="card community-card">
             <div class="community-card__header">
               <img
                 class="community-card__user-image"
-                src="/images/juliet.jpg"
+                src="/images/users/cameron-terry.jpg"
                 alt=""
               />
               <div class="community-card__text">
                 <a class="community-card__recipe-link" href="#">
                   <h4 class="community-card__recipe-name">Dumplings</h4>
                 </a>
-                <p class="community-card__user-name">Juliet Spencer</p>
+                <p class="community-card__user-name">Cameron Terry</p>
               </div>
             </div>
-            <div class="community-card__rating">
+            <div class="rating rating--5-of-5 community-card__rating">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -530,7 +556,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -542,7 +568,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -554,7 +580,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -566,7 +592,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -581,16 +607,16 @@
               omnis labore animi quae, doloremque at est vero, officiis
               adipisci! Aspernatur, tempora iste.
             </p>
-            <img class="community-card__image" src="/dumpling.jpg" alt="" />
+            <img class="community-card__image" src="/images/index/dumpling.jpg" alt="" />
             <div class="community-card__button-group">
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -600,14 +626,14 @@
                 </svg>
                 <span>Like</span>
               </button>
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -619,26 +645,26 @@
               </button>
             </div>
           </li>
-          <li class="community-card">
+          <li class="card community-card">
             <div class="community-card__header">
               <img
                 class="community-card__user-image"
-                src="/images/juliet.jpg"
+                src="/images/users/carl-wright.jpg"
                 alt=""
               />
               <div class="community-card__text">
                 <a class="community-card__recipe-link" href="#">
                   <h4 class="community-card__recipe-name">Fish</h4>
                 </a>
-                <p class="community-card__user-name">Juliet Spencer</p>
+                <p class="community-card__user-name">Carl Wright</p>
               </div>
             </div>
-            <div class="community-card__rating">
+            <div class="rating rating--5-of-5 community-card__rating">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -650,7 +676,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -662,7 +688,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -674,7 +700,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -686,7 +712,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -701,16 +727,16 @@
               omnis labore animi quae, doloremque at est vero, officiis
               adipisci! Aspernatur, tempora iste.
             </p>
-            <img class="community-card__image" src="/fish.jpg" alt="" />
+            <img class="community-card__image" src="/images/index/fish.jpg" alt="" />
             <div class="community-card__button-group">
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -720,14 +746,14 @@
                 </svg>
                 <span>Like</span>
               </button>
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -739,26 +765,26 @@
               </button>
             </div>
           </li>
-          <li class="community-card">
+          <li class="card community-card">
             <div class="community-card__header">
               <img
                 class="community-card__user-image"
-                src="/images/juliet.jpg"
+                src="/images/users/elijah-webb.jpg"
                 alt=""
               />
               <div class="community-card__text">
                 <a class="community-card__recipe-link" href="#">
                   <h4 class="community-card__recipe-name">Shrimp pasta</h4>
                 </a>
-                <p class="community-card__user-name">Juliet Spencer</p>
+                <p class="community-card__user-name">Elijah Webb</p>
               </div>
             </div>
-            <div class="community-card__rating">
+            <div class="rating rating--5-of-5 community-card__rating">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -770,7 +796,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -782,7 +808,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -794,7 +820,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -806,7 +832,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="community-card__rating-star community-card__rating-star--filled"
+                class="rating__star"
               >
                 <path
                   fill-rule="evenodd"
@@ -821,16 +847,16 @@
               omnis labore animi quae, doloremque at est vero, officiis
               adipisci! Aspernatur, tempora iste.
             </p>
-            <img class="community-card__image" src="/shrimp-pasta.jpg" alt="" />
+            <img class="community-card__image" src="/images/index/shrimp-pasta.jpg" alt="" />
             <div class="community-card__button-group">
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -840,14 +866,14 @@
                 </svg>
                 <span>Like</span>
               </button>
-              <button class="community-card__button">
+              <button class="button button--text">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="community-card__button-icon"
+                  class="button__icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -894,7 +920,11 @@
                 type="email"
                 placeholder="Your email address"
               />
-              <button class="newsletter__button">Submit</button>
+              <button
+                class="button button--primary button--small newsletter__button"
+              >
+                Submit
+              </button>
             </form>
           </div>
           <div class="menu-group">

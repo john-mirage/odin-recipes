@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/recipe.css">
   </head>
   <body class="page">
     <div class="container page__container">
@@ -52,7 +53,7 @@
         </div>
         <div class="header__section header__section--right">
           <button
-            class="icon-button icon-button--on-light icon-button--account"
+            class="icon-button icon-button--secondary icon-button--on-light header__account-icon"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,9 @@
               />
             </svg>
           </button>
-          <button class="icon-button icon-button--on-light icon-button--search">
+          <button
+            class="icon-button icon-button--secondary icon-button--on-light header__search-icon"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -83,7 +86,9 @@
               />
             </svg>
           </button>
-          <button class="icon-button icon-button--on-light icon-button--menu">
+          <button
+            class="icon-button icon-button--secondary icon-button--on-light header__menu-icon"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -120,12 +125,12 @@
             <div class="recipe__header-left">
               <h1 class="recipe__name">Lasagna</h1>
               <div class="recipe__rating">
-                <div class="rating">
+                <div class="rating rating--4-of-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating__star rating__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -137,7 +142,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating__star rating__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -149,7 +154,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating__star rating__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -161,7 +166,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating__star rating__star--filled"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -173,7 +178,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="rating__star rating__star--empty"
+                    class="rating__star"
                   >
                     <path
                       fill-rule="evenodd"
@@ -190,7 +195,7 @@
               </p>
               <div class="recipe__buttons">
                 <button
-                  class="button button--with-bg button--large recipe__primary-button"
+                  class="button button--primary button--large recipe__primary-button"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +213,7 @@
                   </svg>
                   Save the recipe
                 </button>
-                <button class="button button--without-bg button--medium">
+                <button class="button button--text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -225,7 +230,7 @@
                   </svg>
                   Print
                 </button>
-                <button class="button button--without-bg button--medium">
+                <button class="button button--text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -273,7 +278,7 @@
               </ul>
             </div>
           </div>
-          <img class="recipe__image" src="/lasagna.jpg" alt="Lasagna" />
+          <img class="recipe__image" src="/images/recipes/lasagna/lasagna.jpg" alt="Lasagna" />
           <div class="recipe__body">
             <div class="ingredients recipe__ingredients">
               <div class="ingredients__header">
@@ -303,14 +308,16 @@
                 </div>
                 <h2 class="ingredients__title">Ingredients</h2>
                 <div class="quantity-button ingredients__quantity-button">
-                  <button class="quantity-button__button">
+                  <button
+                    class="icon-button icon-button--primary icon-button--on-light"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="quantity-button__icon"
+                      class="icon-button__icon"
                     >
                       <path
                         stroke-linecap="round"
@@ -320,14 +327,16 @@
                     </svg>
                   </button>
                   <p class="quantity-button__label">12 serving</p>
-                  <button class="quantity-button__button">
+                  <button
+                    class="icon-button icon-button--primary icon-button--on-light"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="quantity-button__icon"
+                      class="icon-button__icon"
                     >
                       <path
                         stroke-linecap="round"
@@ -439,7 +448,7 @@
               <div class="video steps__video">
                 <img
                   class="video__image"
-                  src="/recipes/lasagna/lasagna-video.jpg"
+                  src="/images/recipes/lasagna/lasagna-video.jpg"
                   alt="lasagna"
                 />
                 <div class="video__play-icon-container"></div>
@@ -534,7 +543,7 @@
             </div>
           </div>
           <div class="recipe__buttons">
-            <button class="button button--without-bg button--medium">
+            <button class="button button--text">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -551,7 +560,7 @@
               </svg>
               Save for later
             </button>
-            <button class="button button--without-bg button--medium">
+            <button class="button button--text">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -568,7 +577,7 @@
               </svg>
               Print
             </button>
-            <button class="button button--without-bg button--medium">
+            <button class="button button--text">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -591,12 +600,12 @@
           <div class="reviews__left-section">
             <h2 class="reviews__title">Customer Reviews</h2>
             <div class="reviews__rating">
-              <div class="rating">
+              <div class="rating rating--4-of-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="rating__star rating__star--filled"
+                  class="rating__star"
                 >
                   <path
                     fill-rule="evenodd"
@@ -608,7 +617,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="rating__star rating__star--filled"
+                  class="rating__star"
                 >
                   <path
                     fill-rule="evenodd"
@@ -620,7 +629,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="rating__star rating__star--filled"
+                  class="rating__star"
                 >
                   <path
                     fill-rule="evenodd"
@@ -632,7 +641,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="rating__star rating__star--filled"
+                  class="rating__star"
                 >
                   <path
                     fill-rule="evenodd"
@@ -644,7 +653,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="rating__star rating__star--empty"
+                  class="rating__star"
                 >
                   <path
                     fill-rule="evenodd"
@@ -768,7 +777,7 @@
               customers
             </p>
             <button
-              class="button button--medium button--outlined reviews__share-button"
+              class="button button--secondary button--medium reviews__share-button"
             >
               Write a review
             </button>
@@ -779,17 +788,17 @@
                 <div class="review__header">
                   <img
                     class="review__user-image"
-                    src="/images/anastasia.jpg"
+                    src="/images/users/herbert-martin.jpg"
                     alt=""
                   />
                   <div class="review__user-info">
-                    <h4 class="review__user-name">Emily Selman</h4>
-                    <div class="rating">
+                    <h4 class="review__user-name">Herbert Martin</h4>
+                    <div class="rating rating--5-of-5">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -801,7 +810,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -813,7 +822,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -825,7 +834,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -837,7 +846,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--empty"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -857,17 +866,17 @@
                 <div class="review__header">
                   <img
                     class="review__user-image"
-                    src="/images/anastasia.jpg"
+                    src="/images/users/krin-hunter.jpg"
                     alt=""
                   />
                   <div class="review__user-info">
-                    <h4 class="review__user-name">Emily Selman</h4>
-                    <div class="rating">
+                    <h4 class="review__user-name">Krin Hunter</h4>
+                    <div class="rating rating--5-of-5">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -879,7 +888,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -891,7 +900,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -903,7 +912,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -915,7 +924,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--empty"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -935,17 +944,17 @@
                 <div class="review__header">
                   <img
                     class="review__user-image"
-                    src="/images/anastasia.jpg"
+                    src="/images/users/mae-silva.jpg"
                     alt=""
                   />
                   <div class="review__user-info">
-                    <h4 class="review__user-name">Emily Selman</h4>
-                    <div class="rating">
+                    <h4 class="review__user-name">Mae Silva</h4>
+                    <div class="rating rating--5-of-5">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -957,7 +966,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -969,7 +978,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -981,7 +990,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--filled"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -993,7 +1002,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="rating__star rating__star--empty"
+                        class="rating__star"
                       >
                         <path
                           fill-rule="evenodd"
@@ -1010,7 +1019,23 @@
                 </p>
               </li>
             </ul>
-            <a class="link reviews__more-link" href="#">Show more reviews</a>
+            <a class="link" href="#">
+              Show more reviews
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="link__icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </a>
           </div>
         </section>
       </main>
@@ -1047,7 +1072,11 @@
                 type="email"
                 placeholder="Your email address"
               />
-              <button class="newsletter__button">Submit</button>
+              <button
+                class="button button--primary button--small newsletter__button"
+              >
+                Submit
+              </button>
             </form>
           </div>
           <div class="menu-group">
