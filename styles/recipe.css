@@ -16,24 +16,24 @@
 .breadcrumb__item {
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(37.1% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .breadcrumb__link {
   text-decoration: none;
-  color: oklch(37.1% 0 0);
+  color: var(--color-on-gray-background-variant);
   transition-property: color;
   transition-duration: 300ms;
 }
 
 .breadcrumb__link:hover {
-  color: oklch(59.6% 0.145 163.225);
+  color: var(--color-primary-hover)
 }
 
 .breadcrumb__item + .breadcrumb__item::before {
   content: "/";
   margin-right: 1rem;
-  color: oklch(37.1% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .recipe {
@@ -54,6 +54,7 @@
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem;
+  color: var(--color-on-gray-background);
 }
 
 .recipe__rating {
@@ -67,7 +68,7 @@
 .recipe__rating-text {
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .recipe__description {
@@ -75,7 +76,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75rem;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .recipe__buttons {
@@ -108,6 +109,33 @@
   margin-bottom: 6rem;
 }
 
+.recipe-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.recipe-info__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recipe-info__name {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-on-gray-background);
+}
+
+.recipe-info__value {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-on-gray-background-variant);
+}
+
 .ingredients__header {
   margin-bottom: 2rem;
   display: flex;
@@ -129,7 +157,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .ingredients__icon-container {
@@ -138,21 +166,17 @@
   align-items: center;
   width: 2rem;
   height: 2rem;
-  background-color: oklch(50.8% 0.118 165.612);
+  background-color: var(--color-primary);
   border-radius: 0.5rem;
 }
 
 .ingredients__icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: oklch(98.5% 0 0);
+  color: var(--color-on-primary);
 }
 
 .ingredients__section {
-  background-color: oklch(98.5% 0 0);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -164,7 +188,7 @@
   margin-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-surface);
 }
 
 .ingredients__list {
@@ -180,10 +204,10 @@
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 0.063rem solid oklch(87% 0 0);
+  border-bottom: 0.063rem solid var(--color-outline);
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-surface-variant);
 }
 
 .ingredients__item:last-child {
@@ -201,34 +225,7 @@
 .quantity-button__label {
   font-size: 1rem;
   font-weight: 500;
-  color: oklch(43.9% 0 0);
-}
-
-.recipe-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  list-style: none;
-  padding-left: 0;
-}
-
-.recipe-info__item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.recipe-info__name {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: oklch(20.5% 0 0);
-}
-
-.recipe-info__value {
-  font-size: 1rem;
-  font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .steps__header {
@@ -244,7 +241,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-surface);
 }
 
 .steps__icon-container {
@@ -253,14 +250,14 @@
   align-items: center;
   width: 2rem;
   height: 2rem;
-  background-color: oklch(50.8% 0.118 165.612);
+  background-color: var(--color-primary);
   border-radius: 0.5rem;
 }
 
 .steps__icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: oklch(98.5% 0 0);
+  color: var(--color-on-primary);
 }
 
 .steps__video {
@@ -268,10 +265,6 @@
 }
 
 .steps__body {
-  background-color: oklch(98.5% 0 0);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -291,14 +284,14 @@
   align-items: start;
   gap: 1.5rem;
   counter-increment: list;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-surface-variant);
 }
 
 .steps__item::before {
   content: counter(list);
   font-size: 1.125rem;
   font-weight: 600;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-surface);
 }
 
 .video {
@@ -326,7 +319,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 9999px;
-  background-color: oklch(92.2% 0 0);
+  background-color: var(--color-gray-background);
   opacity: 60%;
 }
 
@@ -338,6 +331,7 @@
   transform: translate(-50%, -50%);
   width: 2.5rem;
   height: 2.5rem;
+  color: var(--color-on-gray-background);
 }
 
 .tips {
@@ -347,7 +341,7 @@
   align-items: start;
   padding: 2rem;
   border-radius: 1rem;
-  background-color: oklch(43.2% 0.095 166.913);
+  background-color: var(--color-emerald-background);
 }
 
 .tips__left-section {
@@ -358,7 +352,7 @@
 .tips__icon {
   width: 3rem;
   height: 3rem;
-  color: oklch(98.5% 0 0);
+  color: var(--color-on-emerald-background);
 }
 
 .tips__right-section {
@@ -370,14 +364,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2rem;
-  color: oklch(98.5% 0 0);
+  color: var(--color-on-emerald-background);
 }
 
 .tips__value {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  color: oklch(87% 0 0);
+  color: var(--color-on-emerald-background-variant);
 }
 
 .reviews__left-section {
@@ -395,7 +389,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 3rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .reviews__rating {
@@ -408,7 +402,7 @@
 .reviews__review-number {
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .reviews__rating {
@@ -426,7 +420,7 @@
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 500;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);;
 }
 
 .reviews__share-subtitle {
@@ -434,7 +428,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .reviews__share-button {
@@ -452,13 +446,13 @@
   min-width: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .rating-bar__icon {
   width: 1rem;
   height: 1rem;
-  color: oklch(79.5% 0.184 86.047);
+  color: var(--color-rating-star-filled);
 }
 
 .rating-bar__bar {
@@ -467,7 +461,7 @@
   flex: 1;
   border-radius: 9999px;
   height: 0.75rem;
-  background-color: oklch(87% 0 0);
+  background-color: var(--color-rating-star-empty);
 }
 
 .rating-bar__bar-progress {
@@ -476,7 +470,7 @@
   left: 0;
   height: 100%;
   border-radius: 9999px;
-  background-color: oklch(79.5% 0.184 86.047);
+  background-color: var(--color-rating-star-filled);
 }
 
 .rating-bar__bar-progress--5 {
@@ -502,12 +496,13 @@
 .rating-bar__note-percentage {
   min-width: 2.5rem;
   text-align: right;
+  color: var(--color-on-gray-background);
 }
 
 .review {
   padding-bottom: 2rem;
   padding-top: 2rem;
-  border-bottom: 0.063rem solid oklch(87% 0 0);
+  border-bottom: 0.063rem solid var(--color-outline);
 }
 
 .review:first-child {
@@ -540,14 +535,14 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 1rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .review__content {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 
@@ -584,7 +579,7 @@
     display: block;
     height: 100%;
     width: 0.063rem;
-    background-color: oklch(87% 0 0);
+    background-color: var(--color-outline);
   }
 
   .tips {

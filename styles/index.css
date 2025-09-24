@@ -19,35 +19,14 @@
   font-size: 3.5rem;
   line-height: 4rem;
   font-weight: 600;
-  color: oklch(97% 0 0);
+  color: var(--color-on-emerald-background);
 }
 
 .hero__subtitle {
   font-family: var(--font-family);
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(87% 0 0);
-}
-
-.hero__button {
-  border: none;
-  border-radius: 0.25rem;
-  background-color: oklch(59.6% 0.145 163.225);
-  color: oklch(97% 0 0);
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 300ms;
-}
-
-.hero__button:hover {
-  background-color: oklch(76.5% 0.177 163.223);
+  color: var(--color-on-emerald-background-variant);
 }
 
 .hero__right-section {
@@ -99,7 +78,7 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 1rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-surface);
 }
 
 .rating-card__rating {
@@ -107,22 +86,9 @@
   margin-bottom: 0.5rem;
 }
 
-.rating-card__star {
-  width: 1rem;
-  height: 1rem;
-}
-
-.rating-card__star--filled {
-  color: oklch(79.5% 0.184 86.047);
-}
-
-.rating-card__star--empty {
-  color: oklch(87% 0 0);
-}
-
 .rating-card__text {
   font-family: var(--font-family);
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-surface-variant);
 }
 
 .popular-recipes {
@@ -145,7 +111,7 @@
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .popular-recipes__link {
@@ -155,7 +121,7 @@
 .popular-recipes__subtitle {
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .popular-recipes__grid {
@@ -175,7 +141,7 @@
 }
 
 .recipe-card__link:hover .recipe-card__title {
-  color: oklch(59.6% 0.145 163.225);
+  color: var(--color-primary-hover);
 }
 
 .recipe-card__image {
@@ -188,7 +154,7 @@
 .recipe-card__title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
   transition-property: color;
   transition-duration: 300ms;
 }
@@ -196,7 +162,7 @@
 .recipe-card__author {
   font-size: 1rem;
   font-weight: 400;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-gray-background-variant);
 }
 
 .cta {
@@ -216,32 +182,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2rem;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-surface);
 }
 
 .cta__subtitle {
   margin-bottom: 1rem;
-  color: oklch(43.9% 0 0);
-}
-
-.cta__button {
-  border: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: oklch(50.8% 0.118 165.612);
-  color: oklch(97% 0 0);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 300ms;
-}
-
-.cta__button:hover {
-  background-color: oklch(69.6% 0.17 162.48);
+  color: var(--color-on-surface-variant);
 }
 
 .community-recipes {
@@ -263,7 +209,7 @@
   font-size: 3rem;
   line-height: 3.5rem;
   font-weight: 600;
-  color: oklch(20.5% 0 0);
+  color: var(--color-on-gray-background);
 }
 
 .community-recipes__link {
@@ -296,7 +242,7 @@
 
 .community-card__recipe-link {
   text-decoration: none;
-  color: oklch(50.8% 0.118 165.612);
+  color: var(--color-primary);
 }
 
 .community-card__recipe-link:hover {
@@ -314,7 +260,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1rem;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-surface-variant);
 }
 
 .community-card__rating {
@@ -325,7 +271,7 @@
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: oklch(43.9% 0 0);
+  color: var(--color-on-surface-variant);
 }
 
 .community-card__image {

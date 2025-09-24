@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] Refactor colors
+- [x] Refactor colors
 - [ ] Refactor spacing
 - [x] Refactor BEM components
 - [x] Refactor SVG management
@@ -10,3 +10,7 @@
 - [x] Split CSS files
 - [x] Convert images to Webp
 - [ ] Generate text content wit AI
+- [ ] refactor icon-button
+- [ ] refactor logo
+- [ ] refactor navigation
+- [ ] add typo component
