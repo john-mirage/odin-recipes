@@ -2,11 +2,11 @@
 
 ## Todo
 
-- Refactor colors
-- Refactor spacing
-- Refactor BEM components
-- Refactor SVG management
-- Refactor Structure of the files
-- Split CSS files
-- Convert images to Webp
-- Generate text content wit AI
+- [ ] Refactor colors
+- [ ] Refactor spacing
+- [x] Refactor BEM components
+- [x] Refactor SVG management
+- [x] Refactor Structure of the files
+- [x] Split CSS files
+- [x] Convert images to Webp
+- [ ] Generate text content wit AI
