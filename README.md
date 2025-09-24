@@ -14,3 +14,4 @@
 - [ ] refactor navigation
 - [x] add typo component
 - [ ] add meta
+- [x] add banner to credit designers
