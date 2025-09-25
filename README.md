@@ -15,4 +15,5 @@
 - [x] add typo component
 - [ ] add meta
 - [x] add banner to credit designers
-- [ ] add images alt
+- [x] add images alt
+- [x] convert all link from absolute to relative

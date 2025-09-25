@@ -148,7 +148,7 @@
 .cta {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-image: url("/images/index/breakfast.webp");
+  background-image: url("../images/index/breakfast.webp");
   background-position: center;
   background-size: cover;
 }
