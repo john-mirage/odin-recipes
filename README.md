@@ -8,7 +8,7 @@
 - [x] Refactor Structure of the files
 - [x] Split CSS files
 - [x] Convert images to Webp
-- [ ] Generate text content wit AI
+- [x] Generate text content wit AI
 - [ ] refactor icon-button
 - [ ] refactor logo
 - [ ] refactor navigation
