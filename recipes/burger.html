@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Recipes | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/recipe.css" />
+  </head>
+  <body class="page">
+    <svg
+      class="page__icons"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="logo" viewBox="0 0 16 16">
+        <path
+          fill="currentColor"
+          d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"
+        />
+      </symbol>
+      <symbol id="icon-account" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+        />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-share" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+        />
+      </symbol>
+      <symbol id="icon-bookmark" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+        />
+      </symbol>
+      <symbol id="icon-print" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z"
+        />
+      </symbol>
+      <symbol id="icon-carrot" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.27 21.7s9.87-3.5 12.73-6.36a4.5 4.5 0 0 0-6.36-6.37C5.77 11.84 2.27 21.7 2.27 21.7zM8.64 14l-2.05-2.04M15.34 15l-2.46-2.46"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M22 9s-1.33-2-3.5-2C16.86 7 15 9 15 9s1.33 2 3.5 2S22 9 22 9z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 2s-2 1.33-2 3.5S15 9 15 9s2-1.84 2-3.5C17 3.33 15 2 15 2z"
+        />
+      </symbol>
+      <symbol id="icon-minus" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 12h14"
+        />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 4.5v15m7.5-7.5h-15"
+        />
+      </symbol>
+      <symbol id="icon-chef" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 17h12"
+        />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+      <symbol id="icon-bulbe" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 .75a8.25 8.25 0 0 0-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 0 0 .577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 0 1-.937-.171.75.75 0 1 1 .374-1.453 5.261 5.261 0 0 0 2.626 0 .75.75 0 1 1 .374 1.452 6.712 6.712 0 0 1-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 0 0 .577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0 0 12 .75Z"
+        />
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M9.013 19.9a.75.75 0 0 1 .877-.597 11.319 11.319 0 0 0 4.22 0 .75.75 0 1 1 .28 1.473 12.819 12.819 0 0 1-4.78 0 .75.75 0 0 1-.597-.876ZM9.754 22.344a.75.75 0 0 1 .824-.668 13.682 13.682 0 0 0 2.844 0 .75.75 0 1 1 .156 1.492 15.156 15.156 0 0 1-3.156 0 .75.75 0 0 1-.668-.824Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+        />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke-width="1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
+    </svg>
+    <div class="banner">
+      <a
+        href="https://dribbble.com/audreytoulemont"
+        class="typo typo--label-md banner__link"
+      >
+        Design by Audrey Toulemont
+        <svg class="banner__icon banner__icon--arrow">
+          <use href="#icon-arrow-right"></use>
+        </svg>
+      </a>
+      <button class="banner__button">
+        <svg class="banner__icon banner__icon--close">
+          <use href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="container page__container">
+      <header class="header header--recipe">
+        <div class="header__section header__section--left">
+          <a class="logo logo--on-light" href="/index.html">
+            <svg class="logo__icon">
+              <use href="#logo"></use>
+            </svg>
+            <span class="typo typo--title-md logo__text">Odin Recipes</span>
+          </a>
+        </div>
+        <div class="header__section header__section--middle">
+          <nav class="navigation navigation--on-light">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  class="typo typo--body-md navigation__link"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="typo typo--body-md navigation__link"
+                  href="/index.html"
+                  >Recipes</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="typo typo--body-md navigation__link"
+                  href="/index.html"
+                  >Articles</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="typo typo--body-md navigation__link"
+                  href="/about.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__section header__section--right">
+          <button
+            class="icon-button icon-button--secondary icon-button--on-light header__account-icon"
+          >
+            <svg class="icon-button__icon">
+              <use href="#icon-account"></use>
+            </svg>
+          </button>
+          <button
+            class="icon-button icon-button--secondary icon-button--on-light header__search-icon"
+          >
+            <svg class="icon-button__icon">
+              <use href="#icon-search"></use>
+            </svg>
+          </button>
+          <button
+            class="icon-button icon-button--secondary icon-button--on-light header__menu-icon"
+          >
+            <svg class="icon-button__icon">
+              <use href="#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="breadcrumb">
+          <nav class="breadcrumb__navigation">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a
+                  class="typo typo--body-md breadcrumb__link"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="breadcrumb__item">
+                <a class="typo typo--body-md breadcrumb__link" href="#"
+                  >Recipes</a
+                >
+              </li>
+              <li class="typo typo--body-md breadcrumb__item">
+                Perfect Burger
+              </li>
+            </ol>
+          </nav>
+        </section>
+        <section class="recipe">
+          <div class="recipe__header">
+            <div class="recipe__header-info">
+              <h1 class="typo typo--title-xxl recipe__name">Perfect Burger</h1>
+              <div class="recipe__rating">
+                <div class="rating rating--4-of-5">
+                  <svg class="rating__star">
+                    <use href="#icon-star"></use>
+                  </svg>
+                  <svg class="rating__star">
+                    <use href="#icon-star"></use>
+                  </svg>
+                  <svg class="rating__star">
+                    <use href="#icon-star"></use>
+                  </svg>
+                  <svg class="rating__star">
+                    <use href="#icon-star"></use>
+                  </svg>
+                  <svg class="rating__star">
+                    <use href="#icon-star"></use>
+                  </svg>
+                </div>
+                <p class="typo typo--body-md recipe__rating-text">
+                  Based on 1624 reviews
+                </p>
+              </div>
+              <p class="typo typo--body-md recipe__description">
+                Juicy, perfectly seasoned patties with all your favorite
+                toppings. Learn the secrets to restaurant-quality burgers at
+                home.
+              </p>
+              <ul class="recipe-info">
+                <li class="recipe-info__item">
+                  <div class="recipe-info__item-inner">
+                    <h3 class="typo typo--title-sm recipe-info__name">
+                      Preparation
+                    </h3>
+                    <p class="typo typo--body-md recipe-info__value">
+                      15 minutes
+                    </p>
+                  </div>
+                </li>
+                <li class="recipe-info__item">
+                  <div class="recipe-info__item-inner">
+                    <h3 class="typo typo--title-sm recipe-info__name">
+                      Cooking
+                    </h3>
+                    <p class="typo typo--body-md recipe-info__value">
+                      10 minutes
+                    </p>
+                  </div>
+                </li>
+                <li class="recipe-info__item">
+                  <div class="recipe-info__item-inner">
+                    <h3 class="typo typo--title-sm recipe-info__name">
+                      Serves
+                    </h3>
+                    <p class="typo typo--body-md recipe-info__value">
+                      4 people
+                    </p>
+                  </div>
+                </li>
+                <li class="recipe-info__item">
+                  <div class="recipe-info__item-inner">
+                    <h3 class="typo typo--title-sm recipe-info__name">
+                      Calories
+                    </h3>
+                    <p class="typo typo--body-md recipe-info__value">
+                      380 per serving
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="recipe__buttons">
+                <button
+                  class="button button--primary button--large typo typo--label-md recipe__primary-button"
+                >
+                  <svg class="button__icon">
+                    <use href="#icon-bookmark"></use>
+                  </svg>
+                  Save the recipe
+                </button>
+                <button class="button button--text typo typo--label-md">
+                  <svg class="button__icon">
+                    <use href="#icon-print"></use>
+                  </svg>
+                  Print
+                </button>
+                <button class="button button--text typo typo--label-md">
+                  <svg class="button__icon">
+                    <use href="#icon-share"></use>
+                  </svg>
+                  Share
+                </button>
+              </div>
+            </div>
+            <div class="recipe__header-user">
+              <article class="card user-card recipe__user-card">
+                <div class="user-card__header">
+                  <img
+                    class="user-card__image"
+                    src="/images/users/cameron-terry.webp"
+                    alt=""
+                  />
+                  <div class="user-card__name">
+                    <h4 class="typo typo--title-sm user-card__full-name">
+                      Cameron Terry
+                    </h4>
+                    <a href="#" class="typo typo--body-sm link">
+                      @cameronterry
+                    </a>
+                  </div>
+                </div>
+                <p class="typo typo--body-md user-card__description">
+                  I'm a former restaurant chef turned cooking mentor who
+                  specializes in making gourmet techniques accessible to
+                  everyone. My patient teaching style and creative shortcuts
+                  have helped countless beginners discover their confidence in
+                  the kitchen.
+                </p>
+              </article>
+            </div>
+          </div>
+          <img
+            class="recipe__image"
+            src="/images/recipes/burger/burger.webp"
+            alt="Lasagna"
+          />
+          <div class="recipe__body">
+            <div class="ingredients recipe__ingredients">
+              <div class="ingredients__header">
+                <div class="ingredients__title-container">
+                  <div class="ingredients__icon-container">
+                    <svg class="ingredients__icon">
+                      <use href="#icon-carrot"></use>
+                    </svg>
+                  </div>
+                  <h2 class="typo typo--title-lg ingredients__title">
+                    Ingredients
+                  </h2>
+                </div>
+                <div class="quantity-button ingredients__quantity-button">
+                  <button
+                    class="icon-button icon-button--primary icon-button--on-light"
+                  >
+                    <svg class="icon-button__icon">
+                      <use href="#icon-minus"></use>
+                    </svg>
+                  </button>
+                  <p class="typo typo--label-md quantity-button__label">
+                    4 serving
+                  </p>
+                  <button
+                    class="icon-button icon-button--primary icon-button--on-light"
+                  >
+                    <svg class="icon-button__icon">
+                      <use href="#icon-plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card ingredients__section">
+                <ul class="ingredients__list">
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Ground beef (80/20 blend)</span>
+                    <span>1 lb</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Hamburger buns</span>
+                    <span>4</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Slices cheese</span>
+                    <span>4</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Large tomato, sliced</span>
+                    <span>1</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Lettuce leaves</span>
+                    <span>4</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Onion, sliced</span>
+                    <span>1</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Butter</span>
+                    <span>2 tbsp</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Salt</span>
+                    <span>1 tsp</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Black pepper</span>
+                    <span>1/2 tsp</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Garlic powder</span>
+                    <span>1/2 tsp</span>
+                  </li>
+                  <li class="typo typo--body-md ingredients__item">
+                    <span>Condiments of choice (ketchup, mustard, mayo)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="steps recipe__steps">
+              <div class="steps__header">
+                <div class="steps__icon-container">
+                  <svg class="steps__icon">
+                    <use href="#icon-chef"></use>
+                  </svg>
+                </div>
+                <h2 class="typo typo--title-lg steps__title">Directions</h2>
+              </div>
+              <div class="video steps__video">
+                <img
+                  class="video__image"
+                  src="/images/recipes/burger/burger-video.webp"
+                  alt="lasagna"
+                />
+                <div class="video__play-icon-container"></div>
+                <svg class="video__play-icon">
+                  <use href="#icon-play"></use>
+                </svg>
+              </div>
+              <div class="card steps__body">
+                <ol class="steps__list">
+                  <li class="typo typo--body-md steps__item">
+                    Remove ground beef from refrigerator 15 minutes before
+                    cooking to bring to room temperature.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Gently form beef into 4 equal patties, slightly larger than
+                    your buns (they'll shrink when cooking).
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Season both sides of patties with salt, pepper, and garlic
+                    powder.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Heat a skillet or grill pan over medium-high heat. Cook
+                    patties for 3-4 minutes on first side without pressing down.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Flip burgers and cook 3-4 minutes more for medium doneness.
+                    Add cheese in the last minute if using.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Toast buns with butter in the same pan for 1-2 minutes until
+                    golden.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Assemble burgers with your desired toppings and condiments.
+                  </li>
+                  <li class="typo typo--body-md steps__item">
+                    Serve immediately while hot.
+                  </li>
+                </ol>
+              </div>
+              <div class="tips">
+                <div class="tips__left-section">
+                  <svg class="tips__icon">
+                    <use href="#icon-bulbe"></use>
+                  </svg>
+                </div>
+                <div class="tips__right-section">
+                  <h3 class="typo typo--title-lg tips__name">
+                    Tips for Burger
+                  </h3>
+                  <p class="typo typo--body-md tips__value">
+                    Never press down on the patties while cooking - this
+                    squeezes out the juices and results in a dry burger. Let
+                    them cook undisturbed for the juiciest results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recipe__buttons">
+            <button class="button button--text typo typo--label-md">
+              <svg class="button__icon">
+                <use href="#icon-bookmark"></use>
+              </svg>
+              Save for later
+            </button>
+            <button class="button button--text typo typo--label-md">
+              <svg class="button__icon">
+                <use href="#icon-print"></use>
+              </svg>
+              Print
+            </button>
+            <button class="button button--text typo typo--label-md">
+              <svg class="button__icon">
+                <use href="#icon-share"></use>
+              </svg>
+              Share
+            </button>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="reviews__left-section">
+            <h2 class="typo typo--title-xl reviews__title">Reviews</h2>
+            <div class="reviews__rating">
+              <div class="rating rating--4-of-5">
+                <svg class="rating__star">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg class="rating__star">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg class="rating__star">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg class="rating__star">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg class="rating__star">
+                  <use href="#icon-star"></use>
+                </svg>
+              </div>
+              <p class="typo typo--body-md reviews__review-number">
+                Based on 1624 reviews
+              </p>
+            </div>
+            <div class="reviews__rating-bars">
+              <div class="rating-bar">
+                <p class="typo typo--body-md rating-bar__note">5</p>
+                <svg class="rating-bar__icon">
+                  <use href="#icon-star"></use>
+                </svg>
+                <div class="rating-bar__bar">
+                  <div
+                    class="rating-bar__bar-progress rating-bar__bar-progress--5"
+                  ></div>
+                </div>
+                <p class="typo typo--body-md rating-bar__note-percentage">
+                  65%
+                </p>
+              </div>
+              <div class="rating-bar">
+                <p class="typo typo--body-md rating-bar__note">4</p>
+                <svg class="rating-bar__icon">
+                  <use href="#icon-star"></use>
+                </svg>
+                <div class="rating-bar__bar">
+                  <div
+                    class="rating-bar__bar-progress rating-bar__bar-progress--4"
+                  ></div>
+                </div>
+                <p class="typo typo--body-md rating-bar__note-percentage">
+                  10%
+                </p>
+              </div>
+              <div class="rating-bar">
+                <p class="typo typo--body-md rating-bar__note">3</p>
+                <svg class="rating-bar__icon">
+                  <use href="#icon-star"></use>
+                </svg>
+                <div class="rating-bar__bar">
+                  <div
+                    class="rating-bar__bar-progress rating-bar__bar-progress--3"
+                  ></div>
+                </div>
+                <p class="typo typo--body-md rating-bar__note-percentage">6%</p>
+              </div>
+              <div class="rating-bar">
+                <p class="typo typo--body-md rating-bar__note">2</p>
+                <svg class="rating-bar__icon">
+                  <use href="#icon-star"></use>
+                </svg>
+                <div class="rating-bar__bar">
+                  <div
+                    class="rating-bar__bar-progress rating-bar__bar-progress--2"
+                  ></div>
+                </div>
+                <p class="typo typo--body-md rating-bar__note-percentage">
+                  12%
+                </p>
+              </div>
+              <div class="rating-bar">
+                <p class="typo typo--body-md rating-bar__note">1</p>
+                <svg class="rating-bar__icon">
+                  <use href="#icon-star"></use>
+                </svg>
+                <div class="rating-bar__bar">
+                  <div
+                    class="rating-bar__bar-progress rating-bar__bar-progress--1"
+                  ></div>
+                </div>
+                <p class="typo typo--body-md rating-bar__note-percentage">9%</p>
+              </div>
+            </div>
+            <h3 class="typo typo--title-lg reviews__share-title">
+              Share your thoughts
+            </h3>
+            <p class="typo typo--body-md reviews__share-subtitle">
+              If you’ve used this recipe, share your thoughts with other people
+            </p>
+            <button
+              class="button button--secondary button--medium typo typo--label-md reviews__share-button"
+            >
+              Write a review
+            </button>
+          </div>
+          <div class="reviews__right-section">
+            <ul class="reviews__list">
+              <li class="review">
+                <div class="review__header">
+                  <img
+                    class="review__user-image"
+                    src="/images/users/herbert-martin.webp"
+                    alt=""
+                  />
+                  <div class="review__user-info">
+                    <h4 class="typo typo--title-md review__user-name">
+                      Herbert Martin
+                    </h4>
+                    <div class="rating rating--5-of-5">
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="typo typo--body-md review__content">
+                  Finally, burgers that taste like the restaurant! The tip about
+                  not pressing them made all the difference. So juicy!
+                </p>
+              </li>
+              <li class="review">
+                <div class="review__header">
+                  <img
+                    class="review__user-image"
+                    src="/images/users/krin-hunter.webp"
+                    alt=""
+                  />
+                  <div class="review__user-info">
+                    <h4 class="typo typo--title-md review__user-name">
+                      Krin Hunter
+                    </h4>
+                    <div class="rating rating--5-of-5">
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="typo typo--body-md review__content">
+                  Simple recipe with amazing results. My husband said these were
+                  better than his favorite burger joint. Making again tonight!
+                </p>
+              </li>
+              <li class="review">
+                <div class="review__header">
+                  <img
+                    class="review__user-image"
+                    src="/images/users/mae-silva.webp"
+                    alt=""
+                  />
+                  <div class="review__user-info">
+                    <h4 class="typo typo--title-md review__user-name">
+                      Mae Silva
+                    </h4>
+                    <div class="rating rating--5-of-5">
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <svg class="rating__star">
+                        <use href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="typo typo--body-md review__content">
+                  Perfect seasoning and cooking method. Even my picky kids loved
+                  these. Easy enough for a weeknight dinner too.
+                </p>
+              </li>
+            </ul>
+            <a class="link typo typo--label-md" href="#">
+              Show more reviews
+              <svg class="link__icon">
+                <use href="#icon-chevron-down"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer background">
+      <div class="footer__inner container">
+        <div class="footer__left-section">
+          <a class="footer__logo logo logo--on-dark" href="/index.html">
+            <svg class="logo__icon">
+              <use href="#logo"></use>
+            </svg>
+            <span class="typo typo--title-md logo__text">Odin Recipes</span>
+          </a>
+          <p class="typo typo--body-md footer__site-description">
+            Welcome to Odin Recipe, your destination for delicious, approachable
+            cooking. We believe that great food doesn't have to be complicated.
+          </p>
+        </div>
+        <div class="footer__right-section">
+          <div class="footer__newsletter newsletter">
+            <h3 class="typo typo--title-lg newsletter__title">
+              Sign up for our newsletter
+            </h3>
+            <form class="newsletter__form">
+              <input
+                class="typo typo--label-md newsletter__input"
+                type="email"
+                placeholder="Your email address"
+              />
+              <button
+                class="button button--primary button--small typo typo--label-md newsletter__button"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div class="menu-group">
+            <div class="menu">
+              <h3 class="typo typo--title-lg menu__title">Menu</h3>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Recipes</a>
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Articles</a>
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">About Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu">
+              <h3 class="typo typo--title-lg menu__title">Help</h3>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#"
+                    >Privacy and policy</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#"
+                    >Term of Use</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="menu">
+              <h3 class="typo typo--title-lg menu__title">Social</h3>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Facebook</a>
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Twitter</a>
+                </li>
+                <li class="menu__item">
+                  <a class="typo typo--body-md menu__link" href="#">Youtube</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
